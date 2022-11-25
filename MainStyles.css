@@ -71,12 +71,40 @@ html::-webkit-scrollbar {
     float: left;
 }
 .minivideo{
+    background-color: #F5B301;
     border: 3px  solid #F5B301;
     border-radius: 10px;
     width: 220px;
-    height: 160px;
-    background-color: aqua;
+    height: 167px;
+    display: inline-block;
+    position: relative;
     margin: 30px 20px;
+}
+.minivideo button{
+    background-color: transparent;
+    
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.minivideo button video{
+   
+    background: linear-gradient(to top,rgba(255,0,0,0) 10%,rgb(255, 255, 255));
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    
+    border: 0px;
+}
+.minivideo button label{
+    backdrop-filter: blur(10px) saturate(70%);
+    text-shadow: 0 0 10px white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    font-size: large;
 }
 #horizontalscroll{
     border: 5px 0px 5px 0px solid black;
@@ -87,16 +115,18 @@ html::-webkit-scrollbar {
     white-space: nowrap;
     background-color: yellow;
     position: relative;
+    padding: 0px 0px;
     margin: 20px 0px;
+}
+#horizontalscroll label{
+    position: absolute;
+    top: 10;
+    left: 10;
 }
 ::-webkit-scrollbar-thumb {
     background: yellow; 
   }
-.label{
-    position: absolute;
-    top: 3px;
 
-}
 #productslist div{
-    margin-top: 50px;
+    margin-top: 30px;
 }
