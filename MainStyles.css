@@ -46,7 +46,7 @@ html::-webkit-scrollbar {
 }
 #content{
     width: 100%;
-    background-color: green;
+    background-color: white;
     position:absolute; 
     bottom:100px;
     top: 100px;
