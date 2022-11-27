@@ -74,11 +74,11 @@ html::-webkit-scrollbar {
     background-color: #F5B301;
     border: 3px  solid #F5B301;
     border-radius: 10px;
-    width: 220px;
-    height: 167px;
+    width: 320px;
+    height: 180px;
     display: inline-block;
     position: relative;
-    margin: 30px 20px;
+    margin: 10px 17px;
 }
 .minivideo button{
     background-color: transparent;
@@ -88,12 +88,12 @@ html::-webkit-scrollbar {
     border: 0;
 }
 .minivideo button video{
-   
+    object-fit: cover;
     background: linear-gradient(to top,rgba(255,0,0,0) 10%,rgb(255, 255, 255));
     background-color: transparent;
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    width: 320px;
+    height: 180px;
     
     border: 0px;
 }
@@ -129,4 +129,68 @@ html::-webkit-scrollbar {
 
 #productslist div{
     margin-top: 30px;
+    text-align: left;
+}
+.popup{
+    visibility: hidden;
+    text-align: left;
+    font-size: 20px;
+    background-color: rgb(189, 189, 189);
+    border: 3px  solid rgb(88, 88, 88);
+    border-radius: 10px;
+    width: 1000px;
+    height: 530px;
+    display: inline-block;
+    position: absolute;
+    align-self: center;
+    top: -100px;
+    left: 200px;
+}
+.popup button{
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(189, 189, 189);
+    border: 3px  solid rgb(88, 88, 88);
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    
+    display: inline-block;
+    position: absolute;
+    align-items: center;
+    bottom: 10px;
+    left: 45%;
+}
+.popup label{
+    text-align: left;
+    font-size: 30px;
+    
+    width: 800px;
+    height: 50px;
+    padding-top: 5px;
+    position: absolute;
+    align-items: center;
+    top: 10px;
+    left: 30px;
+}
+.popup p{
+    text-align: left;
+    font-size: 20px;
+    padding-top: 5px;
+    position: absolute;
+    align-items: center;
+    top: 50px;
+    left: 30px;
+}
+#verticalscroll{
+    border: 5px 0px 5px 0px solid black;
+    width: 100%;
+    height: 1700px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    background-color: yellow;
+    position: relative;
+    padding: 0px 0px;
+    margin: 17px 0px;
 }

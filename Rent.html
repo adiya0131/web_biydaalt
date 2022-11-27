@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="MainStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+        <!-- <script src="clash-royale.js"></script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/5563c24e73.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="MainStyles.css">
+        <script type="text/javascript" src="mainJS.js"></script>
+    </head>
+    <style>
+        .navlinks1{
+        list-style: none;
+        margin: 10px 0px 0px 0px;
+        }
+        .renttitle{
+                background-color: #F5B301;
+                border: 3px  solid #F5B301;
+                border-radius: 10px;
+                width: 1400px;
+                height: 70px;
+                display: inline-block;
+                position: absolute;
+                top: 10px;
+                left: 30px;
+                font-size: 40px;
+                padding-top:10px ;
+            }
+        .infos{
+            background-color: #F5B301;
+            border: 3px  solid #F5B301;
+            border-radius: 10px;
+            width: 1400px;
+            height: 530px;
+            display: inline-block;
+            position: absolute;
+            top: 100px;
+            left: 30px;
+        }
+        .infos img{
+            float: right;
+            object-fit: cover;
+            background-color: #F5B301;
+            border: 3px  solid #F5B301;
+            border-radius: 10px;
+            margin: 40px 30px;
+        }
+        .infos>div>div{
+            margin: 20px;
+            position: absolute;
+            left: 0;
+            width: 700px;
+            display: inline-block;
+        }
+        .infos>div>div ul li{
+            list-style: none;
+            margin-right: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .infos>div>div ul li button{
+            display: inline;
+            border: 3px solid rgb(118, 118, 118);
+            border-radius: 5px;
+        }
+        .popup img{
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            overflow: scroll;
+        }
+        #order{
+            position: absolute;
+            bottom: -100px;
+            width: 300px;
+            height: 50px;
+            left: 550px;
+            font-size: 40px;
+            background-color: rgb(189, 189, 189);
+            border: 3px  solid rgb(88, 88, 88);
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function read(){
+            window.blur();
+        }
+        function read(){
+            var rgl=document.getElementById("regulations");
+            rgl.style.visibility="visible";
+        }
+        function iread(){
+            var rgl=document.getElementById("regulations");
+            rgl.style.visibility="hidden";
+        }
+        function done(){
+            var ord=document.getElementById("ordered");
+            ord.style.visibility="hidden";
+        }
+        function iorder(){
+            var ord=document.getElementById("ordered");
+            ord.style.visibility="visible";
+        }
+    </script>
+    <body style="height: 110vh">
+        <div id="container">
+            <div id="header">
+                <section >
+                    <ul class="navlinks">
+                        <li><a class="navlink" href="VideoInfo.html">Back</a></li>
+                        <li><a class="navlink" href="Profile.html">Profile</a></li>
+                        <li><input type="text" style="float: left;" class="search" /></li>
+                        <li><label type="text" class="navlink" style="float: left;">Search</label></li>
+                       
+                    </ul>
+                </section>
+            </div>
+            <div id="content">
+                <div class="renttitle">
+                    <div style="position: relative">
+                        Dr Strange
+                    </div>
+                </div>
+                <div class="infos">
+                    <div style="position: relative">
+                        
+                        <div>
+                            <ul style="margin-left: -30px; margin-top: 0px; text-align: left;">
+                                <li id="infotitle">
+                                    <label>Dr Strange</label>
+                                </li>
+                                <li id="infotime">
+                                    <label>1hr 54min</label>
+                                </li>
+                                <li id="infohmm">
+                                    <label>2016 Sep</label>
+                                </li>
+                                <li id="infogenre">
+                                    <label>action/superhero/adventure</label>
+                                </li>
+                                <li id="infohaha">
+                                    <label>While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="ihaveread" value="Bike" style="width: 20px; height: 20px;">
+                                    <label for="ihaveread"> I have read and agree to the terms and conditions </label>
+                                    <button onclick="read()">read</button>
+                                </li>
+                                <li>
+                                    <label for="types">Choose pls:</label>
+                                    <select name="types" id="cars" style="width: 70px; font-size: 17px ;height: 25px;">
+                                    <option value="value1">type1</option>
+                                    <option value="value2">type2</option>
+                                    <option value="value3">type3</option>
+                                    <option value="value4">type4</option>
+                                    </select>       
+                                </li>
+                                <li id="payment">
+                                    <label>uniin dun: </label>
+                                    <label>100$</label>
+                                </li>
+                            </ul>
+                            <button id="order" onclick="iorder()">order</button>
+                        </div>
+                    </div>
+                    <div class="popup" id="regulations">
+                        <label>Regulations</label>
+                        <ol style="margin-top: 60px;">
+                            <li>you should pay your price</li>
+                            <li>you should pay your price</li>
+                            <li>you should pay your price</li>
+                            <li>you should pay your price</li>
+                            <li>you should pay your price</li>
+                            <li>you should pay your price</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin, nisi non accumsan pharetra, est dui venenatis purus, at elementum tellus felis quis metus. Donec molestie purus luctus tortor euismod sagittis. Duis in diam eget urna consectetur commodo. Pellentesque consequat eros eu felis maximus rhoncus. Integer elementum massa vel sagittis interdum. In aliquet sit amet libero sit amet ultricies. Nam luctus facilisis efficitur. Morbi quis volutpat justo. Proin sed sem porta, commodo sem sed, finibus nulla. Nullam ac nibh et sem dignissim varius. Cras venenatis facilisis lacus, ut porttitor turpis porttitor eu. Fusce dapibus pretium dapibus.</li>
+                        </ol>
+                        <button onclick="iread()">OK</button>
+                    </div>
+                    <div class="popup" id="ordered">
+                        <label>your order id: <span>#1212873898761</span></label>
+                        <p >ta uuriin videog manai ali ch salbaraas tednii dotor irj avah bolomjtoi</p>
+                        <img src="location.png" alt="location" width="800px" height="300px">
+                        <button onclick="done()">OK</button>
+                    </div>
+                    <img src="posterDrStrange.jpg" alt="dr strange" width="640" height="360">
+                </div>
+               
+            </div>
+            
+            
+            <div id="footer">
+                <p id="aboutus"><b>about us</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

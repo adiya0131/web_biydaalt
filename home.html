@@ -2,18 +2,26 @@
 <html>
     <head>
         <title>Home</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="MainStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+        <!-- <script src="clash-royale.js"></script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/5563c24e73.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="MainStyles.css">
+        <script type="text/javascript" src="mainJS.js"></script>
     </head>
     <style>
         .navlinks1{
         list-style: none;
         margin: 10px 0px 0px 0px;
-    }
+        }
     </style>
     <script>
-        function GoVideoInfo(a){
-          window.location.href = "VideoInfo.html";
-        }
+        
     </script>
     <body style="height: 2000px">
         <div id="container">
@@ -23,7 +31,7 @@
                         <li><a class="navlink" href="index.html">Back</a></li>
                         <li><a class="navlink" href="Profile.html">Profile</a></li>
                         <li><input type="text" style="float: left;" class="search" /></li>
-                        <li><label type="text" class="navlink" style="float: left;">Search</label></li>
+                        <li><a type="text" class="navlink" style="float: left;" href="vertical.html">Search</a></li>
                     </ul>
                 </section>
             </div>
@@ -39,17 +47,17 @@
                             <option value="var2">var2</option>
                         </select>
                     </li>
-                    <li><a class="navlink" href="">Top</a></li>
-                    <li><a class="navlink" href="">genre</a></li>
-                    <li><a class="navlink" href="">author</a></li>
+                    <li><a class="navlink" href="home.html">Top</a></li>
+                    <li><a class="navlink" href="home.html">genre</a></li>
+                    <li><a class="navlink" href="home.html">author</a></li>
                 </ul>
                </div>
                <div style="clear: both; text-align: left;" id="productslist">
                     <section id="horizontalscroll">
                         <label>Top of this week</label>
                         <div class="minivideo">
-                          <button onclick="GoVideoInfo(this)">
-                              <video >
+                          <button onclick="GoTo('VideoInfo.html')">
+                              <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
                               <source src="video1.mp4" type="video/mp4">
                               Your browser does not support the video tag.
                               </video>
@@ -57,20 +65,20 @@
                           </button>
                         </div>
                         <div class="minivideo">
-                          <button onclick="GoVideoInfo(this)">
-                              <video >
-                              <source src="video1.mp4" type="video/mp4">
-                              Your browser does not support the video tag.
-                              </video>
-                              <label >title1</label>
-                          </button>
+                            <button onclick="GoTo('VideoInfo.html')">
+                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
+                                <source src="video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <label >title</label>
+                            </button>
                         </div>
                     </section>
                     <section id="horizontalscroll">
                       <label>Top of this week</label>
                       <div class="minivideo">
-                        <button onclick="GoVideoInfo(this)">
-                            <video >
+                        <button onclick="GoTo('VideoInfo.html')">
+                            <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
                             <source src="video1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                             </video>
@@ -78,12 +86,12 @@
                         </button>
                       </div>
                       <div class="minivideo">
-                        <button onclick="GoVideoInfo(this)">
-                            <video >
+                        <button onclick="GoTo('VideoInfo.html')">
+                            <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
                             <source src="video1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                             </video>
-                            <label >title1</label>
+                            <label >title</label>
                         </button>
                       </div>
                   </section>

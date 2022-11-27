@@ -3,7 +3,8 @@
     <head>
         <title>OA video rent</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="MainStyle.css">
+       
+        <script type="text/javascript" src="mainJS.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,17 +12,182 @@
         <!-- <script src="clash-royale.js"></script> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/5563c24e73.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="MainStyles.css">
+        <style>
+            .Bigvideo{
+                background-color: #F5B301;
+                border: 3px  solid #F5B301;
+                border-radius: 10px;
+                width: 1400px;
+                height: 720px;
+                display: inline-block;
+                position: absolute;
+                top: 120px;
+                left: 30px;
+            }
+            
+            .Bigvideo >div video{
+                object-fit: cover;
+                background: linear-gradient(to top,rgba(255,0,0,0) 10%,rgb(255, 255, 255));
+                background-color: transparent;
+                border-radius: 10px;
+                width: 1280px;
+                height: 720px;
+                border: 0px;
+                margin-left: 120px;
+                z-index: 1;
+            }
+            .Bigvideo>div div{
+                width: 400px;
+                height: 720px;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                background-image: linear-gradient(to right, #F5B301 60%, rgba(255, 0, 0, 0)100%);
+            }
+            .Bigvideo>div div div{
+                text-shadow: 0 0 5px white;
+                position: absolute;
+                top: 0px;
+                left: 20px;
+                z-index: 2;
+                font-size: 40px;
+            }
+            .Bigvideo>div div div ul li{
+                list-style: none;
+                margin-right: 10px;
+                margin-top: 20px;
+                font-size: 20px;
+            }
+            
+            .Bigvideo>div div button{
+                border: 0;
+                background: transparent;
+                position: absolute;
+                bottom: 40px;
+                left: 30px;
+                z-index: 2;
+            }
+            #infotime{
+                margin-top: 180px;
+            }
+            #infotitle{
+                text-shadow: 0 0 10px #f8f8f8;
+                margin-top: 30px;
+                margin-left: 10px;
+                font-size: 40px;
+            }
+            #productlist{
+                position: relative;
+            }
+            #rentbutton{
+                border-radius: 20px;
+                width: 200px;
+                height: 70px;
+                box-shadow: 0 0 10px white;
+                background-color: #efc244;
+                border: 5px solid #F5B301;
+                font-size: 40px;
+                position: absolute;
+                bottom: 40px;
+                left:1100px;
+                z-index: 2;
+            }
+        </style>
+        <script>
+            
+            var playbutton=true;
+            function vidPlay(){
+                var a=document.getElementById("bigvideoplaybutton");
+                var video=document.getElementById("MyVideo");
+               
+                if(playbutton){
+                    a.src="Pausebutton.png";
+                    playbutton=false;
+                    video.play();
+                }
+                  else{
+                    a.src="Playbutton.png";
+                    playbutton=true;
+                    video.pause();
+                  }
+            }
+        </script>
     </head>
-    <body id="back" style="height: 120vh;">
+    <body id="back" style="height: 160vh;">
         <div id="container">
             <div id="header">
                 <section>
                     <ul class="navlinks">
+                        <li><a class="navlink" href="home.html">back</a></li>
                         <li><a class="navlink">sign in</a></li>
                     </ul>
                 </section>
             </div>
-            
+            <div class="content">
+                <div class="Bigvideo">
+                    <div style="position: relative">
+                        <video id="MyVideo" poster="posterDrStrange.jpg"  muted>
+                        <source src="video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                        </video>
+                        <div>
+                            <div>
+                                <ul style="margin-left: -30px; margin-top: 0px;">
+                                    <li id="infotitle">
+                                        <label>Dr Strange</label>
+                                    </li>
+                                    <li id="infotime">
+                                        <label>1hr 54min</label>
+                                    </li>
+                                    <li id="infohmm">
+                                        <label>2016 Sep</label>
+                                    </li>
+                                    <li id="infogenre">
+                                        <label>action/superhero/adventure</label>
+                                    </li>
+                                    <li id="infohaha">
+                                        <label>While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button onclick="vidPlay()">
+                                <img id="bigvideoplaybutton" src="Playbutton.png" alt="playbutton" width="150" height="150">
+                            </button>
+                            <button id="rentbutton" onclick="GoTo('rent.html')">
+                                RENT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <section style="position: absolute; left: 0 ; top: 110vh; width:100%;">
+                    <div style="clear: both; text-align: left;" id="productslist">
+                        <section id="horizontalscroll">
+                            <label>Top of this week</label>
+                            <div class="minivideo">
+                            <button onclick="GoTo('VideoInfo.html')">
+                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
+                                <source src="video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <label >title</label>
+                            </button>
+                            </div>
+                            <div class="minivideo">
+                                <button onclick="GoTo('VideoInfo.html')">
+                                    <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
+                                    <source src="video1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                    </video>
+                                    <label >title</label>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
             <div id="footer">
                 <p id="aboutus"><b>about us</b><br>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua.
