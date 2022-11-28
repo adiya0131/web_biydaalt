@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>admin</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="MainStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+        <!-- <script src="clash-royale.js"></script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/5563c24e73.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="MainStyles.css">
+        <script type="text/javascript" src="mainJS.js"></script>
+    </head>
+    <style>
+        #menu{
+            float: left;
+            width: 20%;
+            height: 100%;
+            background-color: lightblue;
+        }
+        #maincontenthaha{
+            float: right;
+            width: 80%;
+            height: 100%;
+            background-color: rgb(215, 221, 128);
+        }
+        .navbutton{
+            height: 25%;
+            width: 100%;
+            background-color: rgb(163, 75, 75);
+            border-right: 3px solid black;
+        }
+        .navbutton>label{
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 400px;
+        }
+    </style>
+    <script>
+
+    </script>
+    <body id="back" style="height: 100vh;">
+        <div id="container">
+            <div id="header">
+                <section>
+                    <ul class="navlinks">
+                        <li><a class="navlink">Profile</a></li>
+                        <li><a class="navlink" style="float: left;">ajiltan Orgil</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div id="content">
+                <section id="menu">
+                    <button class="navbutton" onclick="GoTo('admin-order.html')">
+                        <label>order</label>
+                    </button>
+                    <button class="navbutton" onclick="GoTo('admin-users.html')" style="background-color:rgb(167, 21, 21);">
+                        <label>users</label>
+                    </button>
+                    <button class="navbutton" onclick="GoTo('admin-media.html')">
+                        <label>media</label>
+                    </button>
+                    <button class="navbutton" onclick="GoTo('admin-requests.html')">
+                        <label>requests</label>
+                    </button>
+                </section>
+                <section id="maincontenthaha">
+
+                </section>
+            </div>
+            <div id="footer">
+                <p id="aboutus"><b>about us</b><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
