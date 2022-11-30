@@ -8,3 +8,6 @@ function vidMouseOut(vid){
 function GoTo(str){
     window.location.href = str;
 }
+function exitpop(pop){
+    pop.style.display="none";
+}

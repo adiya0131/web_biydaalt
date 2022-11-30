@@ -37,17 +37,53 @@
             text-align: center;
             text-shadow: 0px 0px 8px white;
         }
-        
+        .popup{
+            left: 35vw;
+            top: 0vh;
+            width: 30vw;
+            height: 70vh;
+            visibility: hidden;
+        }
+        .popup form{
+            width: 100%;
+            margin-top: 30%;
+            margin-left: 30px;
+            margin-right:0;
+            left: 0;
+            right: 0;
+        }
+        .popup form label{
+            font-size: 30px;
+            display: block;
+            position: relative;
+        }
+        .popup form input{
+            font-size: 30px;
+            display: block;
+            position: relative;
+        }
+        .popup>div>button{
+            border-radius: 10px;
+            margin-left: 30px;
+        }
     </style>
     <script>
-
+        function signin(){
+            var pop = document.getElementById("signin");
+            pop.style.visibility="visible";
+        }
+        
+        function add(){
+            var pop = document.getElementById("signup");
+            pop.style.visibility="visible";
+        }
     </script>
     <body id="back" style="height: 100vh;">
         <div id="container">
             <div id="header">
                 <section>
                     <ul class="navlinks">
-                        <li><a class="navlink">sign in</a></li>
+                        <li><a class="navlink" onclick="signin()">sign in</a></li>
                     </ul>
                 </section>
             </div>
@@ -56,8 +92,49 @@
                     <label id="title">OA video rent</label>
                     <br>
                     <a id="continue" href="home.html">
-                        Continue
+                        Contine
                     </a>
+                </div>
+                <div class="popup" id="signin">
+                    <label style="text-align: center;">sign in</label>
+                    <form action="" method="post">
+                        <div>
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" >
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" >
+                            
+                        </div>
+                    </form>
+                    <div style="margin-top: 50px;">
+                        <button onclick="add()">create new</button>
+                        <button onclick="GoTo('admin-order.html')">login as admin</button>
+                        <button>forgot password</button>
+                    </div>
+                    <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
+                </div>
+                <div class="popup" id="signup" style="visibility: visible;" >
+                    <label style="text-align: center;">sign up</label>
+                    <form action="" method="post" style="margin-top: 40px">
+                        <div>
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" >
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" >
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" >
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" >
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" >
+                        </div>
+                    </form>
+                    <div style="margin-top: 50px;">
+                        <button onclick="add()">create new</button>
+                        <button onclick="GoTo('admin-order.html')">login as admin</button>
+                        <button>forgot password</button>
+                    </div>
+                      <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
                 </div>
             </div>
             <div id="footer">

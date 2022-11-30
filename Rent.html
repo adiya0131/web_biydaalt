@@ -72,7 +72,10 @@
         .popup img{
             position: absolute;
             top: 100px;
-            left: 50px;
+            left: 0; 
+        right: 0; 
+        margin-right: auto;  
+        margin-left: auto;
             overflow: scroll;
         }
         #order{
@@ -86,6 +89,10 @@
             border: 3px  solid rgb(88, 88, 88);
             border-radius: 10px;
         }
+        .popup{
+            top: 00px;
+            left: 20vw;
+        }
     </style>
     <script>
         function read(){
@@ -94,14 +101,7 @@
         function read(){
             var rgl=document.getElementById("regulations");
             rgl.style.visibility="visible";
-        }
-        function iread(){
-            var rgl=document.getElementById("regulations");
-            rgl.style.visibility="hidden";
-        }
-        function done(){
-            var ord=document.getElementById("ordered");
-            ord.style.visibility="hidden";
+            rgl.blur();
         }
         function iorder(){
             var ord=document.getElementById("ordered");
@@ -180,13 +180,13 @@
                             <li>you should pay your price</li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin, nisi non accumsan pharetra, est dui venenatis purus, at elementum tellus felis quis metus. Donec molestie purus luctus tortor euismod sagittis. Duis in diam eget urna consectetur commodo. Pellentesque consequat eros eu felis maximus rhoncus. Integer elementum massa vel sagittis interdum. In aliquet sit amet libero sit amet ultricies. Nam luctus facilisis efficitur. Morbi quis volutpat justo. Proin sed sem porta, commodo sem sed, finibus nulla. Nullam ac nibh et sem dignissim varius. Cras venenatis facilisis lacus, ut porttitor turpis porttitor eu. Fusce dapibus pretium dapibus.</li>
                         </ol>
-                        <button onclick="iread()">OK</button>
+                        <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
                     </div>
                     <div class="popup" id="ordered">
                         <label>your order id: <span>#1212873898761</span></label>
                         <p >ta uuriin videog manai ali ch salbaraas tednii dotor irj avah bolomjtoi</p>
                         <img src="location.png" alt="location" width="800px" height="300px">
-                        <button onclick="done()">OK</button>
+                        <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
                     </div>
                     <img src="posterDrStrange.jpg" alt="dr strange" width="640" height="360">
                 </div>
