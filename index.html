@@ -71,11 +71,14 @@
         function signin(){
             var pop = document.getElementById("signin");
             pop.style.visibility="visible";
+            pop.style.display="inline-block";
         }
         
         function add(){
             var pop = document.getElementById("signup");
             pop.style.visibility="visible";
+            pop.style.display="inline-block";
+
         }
     </script>
     <body id="back" style="height: 100vh;">
@@ -113,7 +116,7 @@
                     </div>
                     <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
                 </div>
-                <div class="popup" id="signup" style="visibility: visible;" >
+                <div class="popup" id="signup" >
                     <label style="text-align: center;">sign up</label>
                     <form action="" method="post" style="margin-top: 40px">
                         <div>
@@ -121,12 +124,11 @@
                             <input type="text" placeholder="Enter Username" name="uname" >
                             <label for="psw"><b>Password</b></label>
                             <input type="password" placeholder="Enter Password" name="psw" >
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" >
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" >
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" >
+                            <label for="psw"><b>age</b></label>
+                            <input type="password" placeholder="Enter age" name="psw" >
+                            <label for="psw"><b>sex</b></label>
+                            <input type="password" placeholder="Enter sex" name="psw" >
+                            
                         </div>
                     </form>
                     <div style="margin-top: 50px;">
