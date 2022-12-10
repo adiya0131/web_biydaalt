@@ -59,22 +59,33 @@
         }
         .popup form input{
             font-size: 30px;
-            display: block;
+            display: inline;
             position: relative;
+            width: 400px;
+            border: 1px solid gray;
         }
         .popup>div>button{
             border-radius: 10px;
             margin-left: 30px;
+            width: 100px;
+            height: 50px;
+            padding: 0;
+            margin-top: 0;
         }
     </style>
     <script>
         function signin(){
+            var pop = document.getElementById("signup");
+            pop.style.display="none";
             var pop = document.getElementById("signin");
             pop.style.visibility="visible";
             pop.style.display="inline-block";
+            Remember(pop);
         }
         
         function add(){
+            var pop = document.getElementById("signin");
+            pop.style.display="none";
             var pop = document.getElementById("signup");
             pop.style.visibility="visible";
             pop.style.display="inline-block";
@@ -100,12 +111,14 @@
                 </div>
                 <div class="popup" id="signin">
                     <label style="text-align: center;">sign in</label>
-                    <form action="" method="post">
+                    <form action="home.html" method="get" onsubmit="return SigningIn()">
                         <div>
                             <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" >
+                            <input id="uname" type="text" placeholder="Enter Username" name="uname">
                             <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" >
+                            <input id="psw" type="password" placeholder="Enter Password" name="psw" ><br>
+                            <input  id="rememberme" type="checkbox" name="rememberMe" style="margin: 10px; width:50px;"><b style="margin-top: 10px; width:300px">Remember me for a month</b>
+                            <input id="lgn" type="submit" value="LOGIN" name="login" style="background-color: blue; color: white">
                             
                         </div>
                     </form>
@@ -117,8 +130,8 @@
                     <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
                 </div>
                 <div class="popup" id="signup" >
-                    <label style="text-align: center;">sign up</label>
-                    <form action="" method="post" style="margin-top: 40px">
+                    <label class="title" style="text-align: center;">sign up</label>
+                    <form action="index." method="get" style="margin-top: 40px" onsubmit="return validate()">
                         <div>
                             <label for="uname"><b>Username</b></label>
                             <input type="text" placeholder="Enter Username" name="uname" >
@@ -128,11 +141,12 @@
                             <input type="password" placeholder="Enter age" name="psw" >
                             <label for="psw"><b>sex</b></label>
                             <input type="password" placeholder="Enter sex" name="psw" >
-                            
+                            <br><br>
+                            <input type="submit" value="CREATE" name="create" style="background-color: blue; color: white">
                         </div>
                     </form>
                     <div style="margin-top: 50px;">
-                        <button onclick="add()">create new</button>
+                        <button onclick="signin()">sign in</button>
                         <button onclick="GoTo('admin-order.html')">login as admin</button>
                         <button>forgot password</button>
                     </div>

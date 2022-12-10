@@ -19,11 +19,33 @@
         list-style: none;
         margin: 10px 0px 0px 0px;
         }
+        .Ad{
+           padding: 10px;
+           width: 100%;
+           background-color: gray;
+           position: relative;
+        }
+        .Ad p{
+            position: absolute;
+            width: 400px;
+            left: 30;
+            top: 0;
+        }
+        .imgPoster{
+            display: inline-block;
+            width: 850px;
+            box-shadow: 0 0 8px 8px white inset;
+            background-image: url('AdPoster.jpg');
+            height: 400px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
     </style>
     <script>
         
     </script>
-    <body style="height: 2000px">
+    <body style="height: 2000px;" onload="LoadVideos()">
         <div id="container">
             <div id="header">
                 <section >
@@ -36,22 +58,37 @@
                 </section>
             </div>
             <div id="content">
-               <div style="width: 800px;">
+               <div >
+                
                 <ul class="navlinks1">
+                    <li><p class="navlink" style="float:left">genre</p></li>
                     <li>
-                        <select id="Type" class="navlink">
-                            <option value="type">type</option>
+                        <select id="Type" class="navlink" style="float:left">
+                            <option value="video">adventure</option>
+                            <option value="cd">action</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                        </select>
+                    </li>
+                    <li><p class="navlink" style="float:left ;margin-left: 100px;">type</p></li>
+                    <li>
+                        <select id="Type" class="navlink" style="float:left">
                             <option value="video">video</option>
                             <option value="cd">cd</option>
                             <option value="var1">var1</option>
                             <option value="var2">var2</option>
                         </select>
                     </li>
-                    <li><a class="navlink" href="home.html">Top</a></li>
-                    <li><a class="navlink" href="home.html">genre</a></li>
-                    <li><a class="navlink" href="home.html">author</a></li>
+                    <li><button class="navlink" href="home.html" style="float:left;margin-left: 100px;">by rating</button></li>
                 </ul>
                </div>
+               <section class="Ad" style="margin-top: 50px;">
+                <img class="imgPoster">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                    <br><b>10 kino avaad 1 iig unegui uzeerei </b>
+                </p>
+                </section>
                <div style="clear: both; text-align: left;" id="productslist">
                     <section id="horizontalscroll">
                         <label>Top of this week</label>
@@ -74,60 +111,7 @@
                                 <label >title</label>
                             </button>
                         </div>
-                        <div class="minivideo">
-                            <button onclick="GoTo('VideoInfo.html')">
-                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
-                                <source src="video1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-                                <label >title</label>
-                            </button>
-                        </div>
-                        <div class="minivideo">
-                            <button onclick="GoTo('VideoInfo.html')">
-                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
-                                <source src="video1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-                                <label >title</label>
-                            </button>
-                        </div>
-                        <div class="minivideo">
-                            <button onclick="GoTo('VideoInfo.html')">
-                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
-                                <source src="video1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-                                <label >title</label>
-                            </button>
-                        </div>
-                        <div class="minivideo">
-                            <button onclick="GoTo('VideoInfo.html')">
-                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
-                                <source src="video1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-                                <label >title</label>
-                            </button>
-                        </div>
-                        <div class="minivideo">
-                            <button onclick="GoTo('VideoInfo.html')">
-                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
-                                <source src="video1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-                                <label >title</label>
-                            </button>
-                        </div>
-                        <div class="minivideo">
-                            <button onclick="GoTo('VideoInfo.html')">
-                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
-                                <source src="video1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-                                <label >title</label>
-                            </button>
-                        </div>
+                        
                     </section>
                     <section id="horizontalscroll">
                       <label>Top of this week</label>

@@ -37,15 +37,19 @@
                 padding-left :400px;
             }
         </style>
+        <script>
+            function Initial(){
+                document.getElementById("ProfileName").innerText=localStorage.getItem("Name");
+            }
+        </script>
     </head>
-    <body id="back" style="height: 100vh;">
+    <body id="back" style="height: 100vh;" onload="Initial()">
         <div id="container">
             <div id="header">
                 <section>
                     <ul class="navlinks">
                         <li><a class="navlink" href="home.html">back</a></li>
-                        <li><a class="navlink">orgil</a></li>
-                        <li><a class="navlink" href="Profile.html" style="float: left;">Orgil</a></li>
+                        <li><a class="navlink" href="Profile.html" style="float: left;" id="ProfileName"></a></li>
                         <li><label style="float: left;" class="navlink">ID:3356066</label></li>
                     </ul>
                 </section>
