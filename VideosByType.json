@@ -274,6 +274,188 @@
                 ]
             }
             ]
+        },
+        {
+            "name": "Romance",
+            "products": [
+            {
+                "Name": "DrStrange",
+                "id": "0000001",
+                "Poster": "posterDrStrange.jpg",
+                "VideoPath": "video1mp4",
+                "Time": "1h55m",
+                "YearMonth": "2016",
+                "Rating": 5,
+                "Director": "",
+                "ShortInfo": "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.",
+                "Genre":[
+                    {
+                        "GenreName": "romance"
+                    },
+                    {
+                        "GenreName": "adventure"
+                    }
+                ],
+                "Cast": [
+                    {
+                        "character":"noah",
+                        "Name": ""
+                    },
+                    {
+                        "character":"noah",
+                        "Name": ""
+                    }
+                ]
+            },
+            {
+                "Name": "SpiderManNoWayHome",
+                "id": "0000002",
+                "Poster": "SpiderManNoWayHomePoster.jpg",
+                "VideoPath": "video1mp4",
+                "Time": "2h28m",
+                "YearMonth": "2021",
+                "Rating": 3,
+                "Director": "Jon Watts",
+                "ShortInfo": "For the first time in the cinematic history of Spider-Man, our friendly neighborhood hero's identity is revealed, bringing his Super Hero responsibilities into conflict with his normal life and putting those he cares about most at risk. When he enlists Doctor Strange’s help to restore his secret, the spell tears a hole in their world, releasing the most powerful villains who’ve ever fought a Spider-Man in any universe. Now, Peter will have to overcome his greatest challenge yet, which will not only forever alter his own future but the future of the Multiverse.",
+                "Genre":[
+                    {
+                        "GenreName": "action"
+                    },
+                    {
+                        "GenreName": "adventure"
+                    }
+                ],
+                "Cast": [
+                    {
+                        "character":"Peter",
+                        "Name": "Tom Holland"
+                    },
+                    {
+                        "character":"MJ",
+                        "Name": "ZENDAYA"
+                    }
+                ]
+            },
+            {
+                "Name": "Notebook",
+                "id": "0000003",
+                "Poster": "NotebookPoster.jpg",
+                "VideoPath": "video1mp4",
+                "Time": "2h4m",
+                "YearMonth": "2004",
+                "Rating": 4,
+                "Director": "Nick Cassavetes",
+                "ShortInfo": "A poor yet passionate young man (Ryan Gosling) falls in love with a rich young woman (Rachel McAdams), giving her a sense of freedom, but they are soon separated because of their social differences.",
+                "Genre":[
+                    {
+                        "GenreName": "romance"
+                    },
+                    {
+                        "GenreName": "adventure"
+                    }
+                ],
+                "Cast": [
+                    {
+                        "character":"Noah",
+                        "Name": "Ryan Gosling"
+                    },
+                    {
+                        "character":"Allie",
+                        "Name": "Rachel McAdam"
+                    }
+                ]
+            }
+            ],
+            "name": "Romance",
+            "products": [
+            {
+                "Name": "DrStrange",
+                "id": "0000001",
+                "Poster": "posterDrStrange.jpg",
+                "VideoPath": "video1mp4",
+                "Time": "1h55m",
+                "YearMonth": "2016",
+                "Rating": 5,
+                "Director": "",
+                "ShortInfo": "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.",
+                "Genre":[
+                    {
+                        "GenreName": "scifi"
+                    },
+                    {
+                        "GenreName": "adventure"
+                    }
+                ],
+                "Cast": [
+                    {
+                        "character":"noah",
+                        "Name": ""
+                    },
+                    {
+                        "character":"noah",
+                        "Name": ""
+                    }
+                ]
+            },
+            {
+                "Name": "SpiderManNoWayHome",
+                "id": "0000002",
+                "Poster": "SpiderManNoWayHomePoster.jpg",
+                "VideoPath": "video1mp4",
+                "Time": "2h28m",
+                "YearMonth": "2021",
+                "Rating": 3,
+                "Director": "Jon Watts",
+                "ShortInfo": "For the first time in the cinematic history of Spider-Man, our friendly neighborhood hero's identity is revealed, bringing his Super Hero responsibilities into conflict with his normal life and putting those he cares about most at risk. When he enlists Doctor Strange’s help to restore his secret, the spell tears a hole in their world, releasing the most powerful villains who’ve ever fought a Spider-Man in any universe. Now, Peter will have to overcome his greatest challenge yet, which will not only forever alter his own future but the future of the Multiverse.",
+                "Genre":[
+                    {
+                        "GenreName": "action"
+                    },
+                    {
+                        "GenreName": "adventure"
+                    }
+                ],
+                "Cast": [
+                    {
+                        "character":"Peter",
+                        "Name": "Tom Holland"
+                    },
+                    {
+                        "character":"MJ",
+                        "Name": "ZENDAYA"
+                    }
+                ]
+            },
+            {
+                "Name": "Notebook",
+                "id": "0000003",
+                "Poster": "NotebookPoster.jpg",
+                "VideoPath": "video1mp4",
+                "Time": "2h4m",
+                "YearMonth": "2004",
+                "Rating": 4,
+                "Director": "Nick Cassavetes",
+                "ShortInfo": "A poor yet passionate young man (Ryan Gosling) falls in love with a rich young woman (Rachel McAdams), giving her a sense of freedom, but they are soon separated because of their social differences.",
+                "Genre":[
+                    {
+                        "GenreName": "romance"
+                    },
+                    {
+                        "GenreName": "adventure"
+                    }
+                ],
+                "Cast": [
+                    {
+                        "character":"Noah",
+                        "Name": "Ryan Gosling"
+                    },
+                    {
+                        "character":"Allie",
+                        "Name": "Rachel McAdam"
+                    }
+                ]
+            }
+            ]
         }
     ],
     "Type":[
