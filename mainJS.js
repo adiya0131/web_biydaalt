@@ -25,13 +25,19 @@ function SigningIn(){
             alert("Sorry, your browser does not support Web Storage...");
           }
     }
+      else{
+        localStorage.setItem("RememberedName", null);
+        localStorage.setItem("RememberedPass", null);
+      }
     return true; // if uname and password is right
 }
 function Remember(){
-    if(typeof(Storage) !== "undefined"){
+    if(typeof(Storage) !== "undefined" && document.getElementById("uname").value!=null){
         document.getElementById("uname").value = localStorage.getItem("RememberedName");
         document.getElementById("psw").value = localStorage.getItem("RememberedPass");
+        document.getElementById("rememberme").checked = checked;
     }
+    
 }
 function LoadVideos(type){
     const xhttp = new XMLHttpRequest();
