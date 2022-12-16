@@ -18,7 +18,6 @@ function SigningIn(){
     var isrem=document.getElementById("rememberme");
     if(isrem.checked== true){
         if (typeof(Storage) !== "undefined") {
-            localStorage.setItem("Name", document.getElementById("uname").value);
             localStorage.setItem("RememberedName", document.getElementById("uname").value);
             localStorage.setItem("RememberedPass", document.getElementById("psw").value);
           } else {
@@ -29,6 +28,7 @@ function SigningIn(){
         localStorage.setItem("RememberedName", null);
         localStorage.setItem("RememberedPass", null);
       }
+    localStorage.setItem("Name", document.getElementById("uname").value);
     return true; // if uname and password is right
 }
 function Remember(){
@@ -125,7 +125,7 @@ function LoadVideos(type){
         document.getElementById("productslist").innerHTML=html;
     }
     }
-    xhttp.open("GET", "VideosByType.json",true);
+    xhttp.open("GET", "data/VideosByType.json",true);
     xhttp.send();
 }
 
@@ -169,7 +169,7 @@ function GetRequests(){
         document.getElementById("Guilgeehistory").innerHTML=html;
     }
     }
-    xhttp.open("GET", "DeadlineRequests.json",true);
+    xhttp.open("GET", "data/DeadlineRequests.json",true);
     xhttp.send();
 }
 function GetUserHistory(){
@@ -200,7 +200,7 @@ function GetUserHistory(){
         document.getElementById("Guilgeehistory").innerHTML=html;
     }
     }
-    xhttp.open("GET", "DeadlineRequests.json",true);
+    xhttp.open("GET", "data/DeadlineRequests.json",true);
     xhttp.send();
     // const xhttp = new XMLHttpRequest();
     // var data, users;
@@ -236,7 +236,7 @@ function GetUserHistory(){
     //     document.getElementById("Guilgeehistory").innerHTML=html;
     // }
     // }
-    // xhttp.open("GET", "Userlist.json",true);
+    // xhttp.open("GET", "data/Userlist.json",true);
     // xhttp.send();
 }
  

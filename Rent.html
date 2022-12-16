@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/5563c24e73.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="MainStyles.css">
-        <script type="text/javascript" src="mainJS.js"></script>
+        <script type="text/javascript" src="script/mainJS.js"></script>
     </head>
     <style>
         .navlinks1{
@@ -71,7 +71,7 @@
         }
         .popup img{
             position: absolute;
-            top: 100px;
+            top: 15%;
             left: 0; 
         right: 0; 
         margin-right: auto;  
@@ -101,11 +101,13 @@
         function read(){
             var rgl=document.getElementById("regulations");
             rgl.style.visibility="visible";
+            rgl.style.display="inline";
             rgl.blur();
         }
         function iorder(){
             var ord=document.getElementById("ordered");
             ord.style.visibility="visible";
+            ord.style.display="inline";
         }
     </script>
     <body style="height: 110vh">
@@ -184,11 +186,11 @@
                     </div>
                     <div class="popup" id="ordered">
                         <label>your order id: <span>#1212873898761</span></label>
-                        <p >ta uuriin videog manai ali ch salbaraas tednii dotor irj avah bolomjtoi</p>
-                        <img src="location.png" alt="location" width="800px" height="300px">
+                        <p style="margin: 45px;">ta uuriin videog manai ali ch salbaraas tednii dotor irj avah bolomjtoi</p>
+                        <img src="images/location.png" alt="location" width="800px" height="300px">
                         <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
                     </div>
-                    <img src="posterDrStrange.jpg" alt="dr strange" width="640" height="360">
+                    <img src="images/posterDrStrange.jpg" alt="dr strange" width="640" height="360">
                 </div>
                
             </div>

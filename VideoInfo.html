@@ -4,7 +4,7 @@
         <title>OA video rent</title>
         <meta charset="UTF-8">
        
-        <script type="text/javascript" src="mainJS.js"></script>
+        <script type="text/javascript" src="script/mainJS.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,12 +104,12 @@
                 var video=document.getElementById("MyVideo");
                
                 if(playbutton){
-                    a.src="Pausebutton.png";
+                    a.src="Images/Pausebutton.png";
                     playbutton=false;
                     video.play();
                 }
                   else{
-                    a.src="Playbutton.png";
+                    a.src="Images/Playbutton.png";
                     playbutton=true;
                     video.pause();
                   }
@@ -129,7 +129,7 @@
             <div class="content">
                 <div class="Bigvideo">
                     <div style="position: relative">
-                        <video id="MyVideo" poster="posterDrStrange.jpg"  muted>
+                        <video id="MyVideo" poster="images/posterDrStrange.jpg"  muted>
                         <source src="video1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                         </video>
@@ -154,7 +154,7 @@
                                 </ul>
                             </div>
                             <button onclick="vidPlay()">
-                                <img id="bigvideoplaybutton" src="Playbutton.png" alt="playbutton" width="150" height="150">
+                                <img id="bigvideoplaybutton" src="Images/Playbutton.png" alt="playbutton" width="150" height="150">
                             </button>
                             <button id="rentbutton" onclick="GoTo('rent.html')">
                                 RENT
@@ -168,7 +168,7 @@
                             <label>Top of this week</label>
                             <div class="minivideo">
                             <button onclick="GoTo('VideoInfo.html')">
-                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
+                                <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="images/posterDrStrange.jpg">
                                 <source src="video1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                                 </video>
@@ -177,7 +177,7 @@
                             </div>
                             <div class="minivideo">
                                 <button onclick="GoTo('VideoInfo.html')">
-                                    <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="posterDrStrange.jpg">
+                                    <video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="images/posterDrStrange.jpg">
                                     <source src="video1.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                     </video>

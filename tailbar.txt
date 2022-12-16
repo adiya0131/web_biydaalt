@@ -1,0 +1,48 @@
+hiisen ajil
+202 se21d04 Адъяатөмөр 
+    html
+        -admin undsen suuri
+        -admin requests
+        -rent
+        -index popup structure
+        -home
+        -videoinfo
+        -vertical
+    css 
+        -mainstyle( golduu hemjee )
+            *popup styles
+            *main structure footer header container horizontal minivideo etc
+        -some shared htmls internal css
+    script
+        -mainJS 
+            *validate
+            *GoTo
+            *remember
+            *Loadvideos
+            *getrequests
+            *getuserhistory
+            *vidmouse
+        -some internal script
+201 se21d51 Мөнх Оргил 
+    html
+        -admin form
+        -profile
+        -history
+        -some shared html
+        -index popup objects
+    css
+        -mainstyle( ungu zurag )
+            *edited to make it fit in smaller sized viewport
+            *some of shared htmls css
+        -admin*4 
+        -profile
+        -history
+        -some shared htmls internal css
+    script
+        -mediaform here()
+        -some internal script
+
+dundaa git neegeed yavtsan bolhoor biy biyniihiigee uurchluud nileen yuman deer dundaa ajillasan
+script deerh dasgaluudaas 
+    -pattern shalgadag aa create new account deer bish admin-media deer here() oruulsan bga
+    -nevtersen hereglegchiin id g gargana gedeg deer profile ruu orvol id iin orond ner ni zuun deed tald garj irn
