@@ -144,3 +144,34 @@ function LoadVideos(type){
 // window.onmousedown = e =>{
 //     track.dataset.mouseDownAt = e.clientX;
 // }
+function GetRequests(){
+    const xhttp = new XMLHttpRequest();
+    var data;
+    var html="";
+    xhttp.onreadystatechange = function() {
+    if(this.readyState==4){
+        data=JSON.parse(this.responseText);
+        
+        for(var i=0;i<data.length;i++){
+            html+=`<div class="guilgee">
+            <label>id</label>
+            <p>`;
+            html+=data[i].id;
+            html+=`</p>
+            <label>ognoo</label>
+            <p>`;
+            html+=data[i].date;
+            html+=`</p>
+            <label>uniin dun</label>
+            <p>`;
+            html+=data[i].amount;
+            html+=`</p>
+            </div>
+            `;
+        }
+        document.getElementById("Guilgeehistory").innerHTML=html;
+    }
+    }
+    xhttp.open("GET", "DeadlineRequests.json",true);
+    xhttp.send();
+}

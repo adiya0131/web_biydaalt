@@ -15,6 +15,9 @@
         <script type="text/javascript" src="mainJS.js"></script>
     </head>
     <style>
+        td{
+            text-align: left;
+        }
         #submit{
             border: 2px solid orange;
             width: 350%;
@@ -49,8 +52,49 @@
     </style>
     <script>
         function here(){
-            var name=document.getElementById("name");
-            alert(name.value);
+            var name=document.getElementById("name").value;
+            var id=document.getElementById("id").value;
+            var poster=document.getElementById("poster").value;
+            var director=document.getElementById("director").value;
+            var rating=document.getElementById("rating").value;
+
+            var pattern= /[^A-Za-z]/;
+            if(name.match(pattern)!=null ||  name==null ){
+                document.getElementById("errorname").innerHTML="error";
+            }
+                else{
+                document.getElementById("errorname").innerHTML="";
+            }
+            var pattern= /[^0-9]/;
+            
+            if(id.match(pattern)!=null || id==null  || id.length!=8){
+                document.getElementById("errorid").innerHTML="error";
+            }
+                else{
+                document.getElementById("errorid").innerHTML="";
+            }
+            var pattern= /[^A-Za-z]/;
+            if(poster.match(pattern)!=null || poster==null ){
+                document.getElementById("errorposter").innerHTML="error";
+            }
+                else{
+                document.getElementById("errorposter").innerHTML="";
+            }
+            var pattern= /[^0-5]/;
+            if(rating.match(pattern)!=null || rating==null  || rating.length!=1){
+                document.getElementById("errorrating").innerHTML="error";
+            }
+                else{
+                document.getElementById("errorrating").innerHTML="";
+            }
+            var pattern= /[^A-Za-z]/;
+            if(director.match(pattern)!=null || director==null ){
+                document.getElementById("errordirector").innerHTML="error";
+            }
+                else{
+                document.getElementById("errordirector").innerHTML="";
+            }
+            return false;
         }
     </script>
     <body id="back" style="height: 100vh;">
@@ -81,32 +125,32 @@
                 </section>
                 <section id="maincontenthaha">
                     <form style="padding-left: 450px; padding-top: 200px; font-size: larger;">
-                        <table>
+                        <table >
                             <tr>
                                 <td>Name:</td>
-                                <td><input type="text" id="name"><br></td>
+                                <td><input type="text" id="name"><span id="errorname"></span></td>
                             </tr>
                             <tr>
                                 <td>ID:</td>
-                                <td><input type="text"><br></td>
+                                <td><input type="text" id="id"><span id="errorid"></span></td>
                             </tr>
                             <tr>
                                 <td>Poster:</td>
-                                <td><input type="text"><br></td>
+                                <td><input type="text" id="poster"><span id="errorposter"></span></td>
                             </tr>
                             <tr>
                                 <td>Rating:</td>
-                                <td><input type="text"><br></td>
+                                <td><input type="text" id="rating"><span id="errorrating"></span></td>
                             </tr>
                             <tr>
                                 <td>Director:</td>
-                                <td><input type="text"><br></td>
+                                <td><input type="text" id="director"><span id="errordirector"></span></td>
                             </tr> 
                             <tr>
-                                <td><input type="submit" id="submit"><br></td>
+                                <td><input type="submit" id="submit"></td>
                             </tr>  
                             <tr>
-                                <td><button  id="submit" onclick="here()">here</button><br></td>
+                                <td><button  id="submit" onclick="return here()">here</button></td>
                             </tr> 
                         </table>
                     </form>
