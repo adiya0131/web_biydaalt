@@ -37,7 +37,6 @@ function Remember(){
         document.getElementById("psw").value = localStorage.getItem("RememberedPass");
         document.getElementById("rememberme").checked = checked;
     }
-    
 }
 function LoadVideos(type){
     const xhttp = new XMLHttpRequest();
@@ -82,7 +81,6 @@ function LoadVideos(type){
                 html+="</label>";
                 
                 for(var j=0;j<data.Genre[i].products.length;j++){
-                   
                     if(1){ //checking if video is compatibable with users search
                         html+=`<div class="minivideo"><button onclick="GoTo('VideoInfo.html')"><video onmouseover="vidMouseOver(this)" onmouseout="vidMouseOut(this)" muted poster="`
                         html+=data.Genre[i].products[j].Poster   ;
@@ -97,7 +95,6 @@ function LoadVideos(type){
                     }
                 }
                 html+="</section>";
-                
             }
         }
         for(var i=0;i<data.Genre.length;i++){
@@ -174,4 +171,75 @@ function GetRequests(){
     }
     xhttp.open("GET", "DeadlineRequests.json",true);
     xhttp.send();
+}
+function GetUserHistory(){
+    const xhttp = new XMLHttpRequest();
+    var data;
+    var html="";
+    xhttp.onreadystatechange = function() {
+    if(this.readyState==4){
+        data=JSON.parse(this.responseText);
+        
+        for(var i=0;i<data.length;i++){
+            html+=`<div class="guilgee">
+            <label>id</label>
+            <p>`;
+            html+=data[i].id;
+            html+=`</p>
+            <label>ognoo</label>
+            <p>`;
+            html+=data[i].date;
+            html+=`</p>
+            <label>uniin dun</label>
+            <p>`;
+            html+=data[i].amount;
+            html+=`</p>
+            </div>
+            `;
+        }
+        document.getElementById("Guilgeehistory").innerHTML=html;
+    }
+    }
+    xhttp.open("GET", "DeadlineRequests.json",true);
+    xhttp.send();
+    // const xhttp = new XMLHttpRequest();
+    // var data, users;
+    // var html="";
+    // xhttp.onreadystatechange = function() {
+    // if(this.readyState==4){
+    //     users=JSON.parse(this.responseText);
+    //     for(var i=0;i<users.length;i++){
+            
+    //         if(users[i].name==localStorage.getItem("Name")){
+    //             data=users[i].trasactions;
+    //             i=users.length;
+    //         }
+    //     }
+    //     alert(data);
+    //     for(var i=0;i<data.length;i++){
+    //         html+=`<div class="guilgee">
+    //         <label>id</label>
+    //         <p>`;
+    //         html+=data[i].id;
+    //         html+=`</p>
+    //         <label>ognoo</label>
+    //         <p>`;
+    //         html+=data[i].date;
+    //         html+=`</p>
+    //         <label>uniin dun</label>
+    //         <p>`;
+    //         html+=data[i].amount;
+    //         html+=`</p>
+    //         </div>
+    //         `;
+    //     }
+    //     document.getElementById("Guilgeehistory").innerHTML=html;
+    // }
+    // }
+    // xhttp.open("GET", "Userlist.json",true);
+    // xhttp.send();
+}
+ 
+function Initial(){
+    document.getElementById("ProfileName").innerText=localStorage.getItem("Name");
 }

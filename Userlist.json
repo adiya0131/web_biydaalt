@@ -1,0 +1,98 @@
+[
+    {
+        "name": "adiyagod",
+        "id": "0001",
+        "password": "0131",
+        "age": "19",
+        "gender": "male",
+        "mail": "se21d04@nmit.edu.mn",
+        "Phone": "90320645",
+        "Register": "",
+        "Address": "",
+        "transactions":[
+                {
+                    "id": "00000701",
+                    "name": "adiya",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                },
+                {
+                    "id": "06700001",
+                    "name": "adiya",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                },
+                {
+                    "id": "00070001",
+                    "name": "adiya",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                },
+                {
+                    "id": "00560001",
+                    "name": "adiya",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                },
+                {
+                    "id": "00006781",
+                    "name": "adiya",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                }
+        ]
+    },
+    {
+        "name": "MadOrgil",
+        "id": "0001",
+        "password": "0131",
+        "age": "19",
+        "gender": "male",
+        "mail": "se21d04@nmit.edu.mn",
+        "Phone": "90320645",
+        "Register": "",
+        "Address": "",
+        "transactions":[
+                {
+                    "id": "00000701",
+                    "name": "Orgil",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                },
+                {
+                    "id": "06700001",
+                    "name": "Orgil",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                },
+                {
+                    "id": "00070001",
+                    "name": "Orgil",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                },
+                {
+                    "id": "00560001",
+                    "name": "Orgil",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                },
+                {
+                    "id": "00006781",
+                    "name": "Orgil",
+                    "movie": "drStrange",
+                    "date": "2020/01/31",
+                    "amount": "50$"
+                }
+        ]
+    }
+]
