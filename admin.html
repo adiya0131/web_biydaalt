@@ -15,6 +15,17 @@
         <script type="text/javascript" src="script/mainJS.js"></script>
     </head>
     <style>
+        td{
+            text-align: left;
+        }
+        #submit{
+            border: 2px solid orange;
+            width: 350%;
+            height: 30px;
+            margin-top: 20px;
+            background-color:brown;
+            color:aliceblue ;
+        }
         #menu{
             float: left;
             width: 20%;
@@ -30,7 +41,7 @@
         .navbutton{
             height: 25%;
             width: 100%;
-            background-color: rgb(163, 75, 75);
+            background-color: royalblue;
             border-right: 3px solid black;
         }
         .navbutton>label{
@@ -38,22 +49,9 @@
             font-weight: bold;
             margin-top: 400px;
         }
-        .searchbar{
-            margin-top: 200px;
-            top: 300px;
-            left: 200px;
-            border-radius: 10px;
-            width: 800px;
-            font-weight: normal;
-            height: 40px;
-        }
     </style>
     <script>
-        function add(){
-            var pop=document.getElementById("haisanguilgee");
-            pop.style.visibility="visible";
-            pop.style.display="inline-block";
-        }
+        
     </script>
     <body id="back" style="height: 100vh;">
         <div id="container">
@@ -68,39 +66,51 @@
             </div>
             <div id="content">
                 <section id="menu">
-                    <button class="navbutton" onclick="GoTo('admin-order.html')" style="background-color:rgb(167, 21, 21);">
+                    <button id="Order" class="navbutton" onclick="GoAdmin('Order')">
                         <label>order</label>
                     </button>
-                    <button class="navbutton" onclick="GoTo('admin-users.html')">
+                    <button id="Users" class="navbutton" onclick="GoAdmin('Users')">
                         <label>users</label>
                     </button>
-                    <button class="navbutton" onclick="GoTo('admin-media.html')">
+                    <button id="Media" class="navbutton" onclick="GoAdmin('Media')" style="background-color:green;">
                         <label>media</label>
                     </button>
-                    <button class="navbutton" onclick="GoTo('admin-requests.html')">
+                    <button id="Requests" class="navbutton" onclick="GoAdmin('Requests')">
                         <label>requests</label>
                     </button>
                 </section>
                 <section id="maincontenthaha">
-                    <input type="text" class="searchbar" />
-                    <button style="font-size: 30px; margin-top: 4px; padding-bottom: 5px" onclick="add()">search</button>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <form style="padding-left: 450px; padding-top: 200px; font-size: larger;">
+                        <table >
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" id="name"><span id="errorname"></span></td>
+                            </tr>
+                            <tr>
+                                <td>ID:</td>
+                                <td><input type="text" id="id"><span id="errorid"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Poster:</td>
+                                <td><input type="text" id="poster"><span id="errorposter"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Rating:</td>
+                                <td><input type="text" id="rating"><span id="errorrating"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Director:</td>
+                                <td><input type="text" id="director"><span id="errordirector"></span></td>
+                            </tr> 
+                            <tr>
+                                <td><input type="submit" id="submit"></td>
+                            </tr>  
+                            <tr>
+                                <td><button  id="submit" onclick="return here()">here</button></td>
+                            </tr> 
+                        </table>
+                    </form>
                 </section>
-                    <div class="popup" id="haisanguilgee">
-                        <label>#1212873898761</label>
-                        <ol style="margin-top: 60px;">
-                            <li><label>id</label>#1212873898761</li>
-                            <li><label>orson ognoo</label>0000/00/00</li>
-                            <li><label>garsan ognoo</label>0000/00/00</li>
-                            <li><label>uniin dun</label>40$</li>
-                            <li><label>hereglegch</label>adiya</li>
-                            <li><label>hereglegchiin id</label>#1212873898761</li>
-                            <li><label>kinoni ner</label>dr strange</li>
-                            <li><label>kinonii id</label>#1212873898761</li>
-                        </ol>
-                        <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
-                    </div>
-                </div>
             </div>
             <div id="footer">
                 <p id="aboutus"><b>about us</b><br>

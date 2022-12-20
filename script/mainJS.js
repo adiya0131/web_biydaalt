@@ -14,6 +14,47 @@ function GoTo(str){
 function exitpop(pop){
     pop.style.display="none";
 }
+function validate(){
+    var name=document.getElementById("nameup").value;
+    var pass=document.getElementById("passup").value;
+    var age=document.getElementById("ageup").value;
+    var gender=document.getElementById("genderup").value;
+
+    var ok=true;
+    var pattern= /[^A-Za-z]/;
+    if(name.match(pattern)!=null ||  name=="" ){
+        document.getElementById("errorname").innerHTML="error";
+        ok=false;
+    }
+        else{
+        document.getElementById("errorname").innerHTML="";
+    }
+    pattern= /[^0-9]/;
+    
+    if(pass.match(pattern)!=null || pass==""  || pass.length!=6){
+        document.getElementById("errorpass").innerHTML="error";
+        ok=false;
+    }
+        else{
+        document.getElementById("errorpass").innerHTML="";
+    }
+    if(gender!="man" && gender!='woman'){
+        document.getElementById("errorgender").innerHTML="error";
+        ok=false;
+    }
+        else{
+        document.getElementById("errorgender").innerHTML="";
+    }
+    pattern= /[^0-9]/;
+    if(age.match(pattern)!=null || age==""  || parseInt(age)<16 || parseInt(age)>80){
+        document.getElementById("errorage").innerHTML="error";
+        ok=false;
+    }
+        else{
+        document.getElementById("errorage").innerHTML="";
+    }
+    if(!ok) return false;
+}
 function SigningIn(){
     var isrem=document.getElementById("rememberme");
     if(isrem.checked== true){
@@ -242,4 +283,65 @@ function GetUserHistory(){
  
 function Initial(){
     document.getElementById("ProfileName").innerText=localStorage.getItem("Name");
+}
+function here(){
+            var name=document.getElementById("name").value;
+            var id=document.getElementById("id").value;
+            var poster=document.getElementById("poster").value;
+            var director=document.getElementById("director").value;
+            var rating=document.getElementById("rating").value;
+
+            var pattern= /[^A-Za-z]/;
+            if(name.match(pattern)!=null ||  name==null ){
+                document.getElementById("errorname").innerHTML="error";
+            }
+                else{
+                document.getElementById("errorname").innerHTML="";
+            }
+            var pattern= /[^0-9]/;
+            
+            if(id.match(pattern)!=null || id==null  || id.length!=8){
+                document.getElementById("errorid").innerHTML="error";
+            }
+                else{
+                document.getElementById("errorid").innerHTML="";
+            }
+            var pattern= /[^A-Za-z]/;
+            if(poster.match(pattern)!=null || poster==null ){
+                document.getElementById("errorposter").innerHTML="error";
+            }
+                else{
+                document.getElementById("errorposter").innerHTML="";
+            }
+            var pattern= /[^0-5]/;
+            if(rating.match(pattern)!=null || rating==null  || rating.length!=1){
+                document.getElementById("errorrating").innerHTML="error";
+            }
+                else{
+                document.getElementById("errorrating").innerHTML="";
+            }
+            var pattern= /[^A-Za-z]/;
+            if(director.match(pattern)!=null || director==null ){
+                document.getElementById("errordirector").innerHTML="error";
+            }
+                else{
+                document.getElementById("errordirector").innerHTML="";
+            }
+            return false;
+        }
+function GoAdmin(name){
+    const xhttp = new XMLHttpRequest();
+    var path=name+'.html'
+    xhttp.onreadystatechange = function() {
+    if(this.readyState==4){
+        document.getElementById("maincontenthaha").innerHTML=xhttp.responseText;
+        document.getElementById("Requests").style.backgroundColor=  "RoyalBlue";
+        document.getElementById("Media").style.backgroundColor=  "RoyalBlue";
+        document.getElementById("Order").style.backgroundColor=  "RoyalBlue";
+        document.getElementById("Users").style.backgroundColor=  "RoyalBlue";
+        document.getElementById(name).style.backgroundColor= "green";
+    }
+    }
+    xhttp.open("GET", path ,true);
+    xhttp.send();
 }

@@ -106,7 +106,7 @@
                     <label id="title">OA video rent</label>
                     <br>
                     <a id="continue" href="home.html">
-                        Contine
+                        Continue
                     </a>
                 </div>
                 <div class="popup" id="signin">
@@ -124,30 +124,30 @@
                     </form>
                     <div style="margin-top: 50px;">
                         <button onclick="add()">create new</button>
-                        <button onclick="GoTo('admin-order.html')">login as admin</button>
+                        <button onclick="GoTo('admin.html')">login as admin</button>
                         <button>forgot password</button>
                     </div>
                     <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
                 </div>
                 <div class="popup" id="signup" >
                     <label class="title" style="text-align: center;">sign up</label>
-                    <form action="index." method="get" style="margin-top: 40px" onsubmit="return validate()">
+                    <form action="home.html" method="get" style="margin-top: 40px" onsubmit="return validate()">
                         <div>
-                            <label for="uname"><b>Username</b><span style="margin-left: 40px" id="errorname">error</span></label>
-                            <input type="text" placeholder="Enter Username" name="uname" >
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" >
-                            <label for="psw"><b>age</b></label>
-                            <input type="password" placeholder="Enter age" name="psw" >
-                            <label for="psw"><b>gender</b></label>
-                            <input type="password" placeholder="Enter gender" name="psw" >
+                            <label for="uname"><b>Username</b><span style="margin-left: 40px; color: red" id="errorname"></span></label>
+                            <input id="nameup" type="text" placeholder="Enter Username dan useg " name="uname" >
+                            <label for="psw"><b>Password</b><span style="margin-left: 40px; color: red" id="errorpass"></span></label>
+                            <input  id="passup" type="password" placeholder="Enter Password 6 orontoi too" name="psw" >
+                            <label for="age"><b>age</b><span style="margin-left: 40px; color: red" id="errorage"></span></label>
+                            <input id="ageup" type="password" placeholder="Enter age (16 to 80)" name="age" >
+                            <label for="gender"><b>gender</b><span style="margin-left: 40px; color: red" id="errorgender"></span></label>
+                            <input id="genderup" type="text" placeholder="man or woman" name="gender" >
                             <br><br>
                             <input type="submit" value="CREATE" name="create" style="background-color: blue; color: white">
                         </div>
                     </form>
                     <div style="margin-top: 50px;">
                         <button onclick="signin()">sign in</button>
-                        <button onclick="GoTo('admin-order.html')">login as admin</button>
+                        <button onclick="GoTo('admin.html')">login as admin</button>
                         <button>forgot password</button>
                     </div>
                       <button class="backbutton" onclick="exitpop(this.parentElement)">ok</button>
